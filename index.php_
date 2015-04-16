@@ -1,0 +1,129 @@
+﻿<!--Задачи
+1. Дан массив с элементами 4, 2, 5, 19, 13, 0, 10. С помощью цикла
+foreach и оператора if выведите на экран столбец тех элементов
+массива, которые больше 3-х, но меньше 10.
+2. Дан массив с элементами 4, 2, 5, 19, 13, 0, 10. С помощью цикла
+foreach и оператора if проверьте есть ли в массиве элемент со
+значением $e, равном 2, 3 или 4. Если есть — выведите на экран
+'Есть!', иначе выведите 'Нет!'.
+3. Дан массив $arr. С помощью цикла foreach и переменной $count
+подсчитайте количество элементов этого массива. Проверьте работу
+скрипта на примере массива с элементами 4, 2, 5, 19, 13, 0, 10.
+4. Составьте массив месяцев. С помощью цикла foreach выведите все
+месяцы, а текущий месяц выведите жирным (<b></b>). Текущий
+месяц должен храниться в переменной $month.
+5. Нарисуйте пирамиду, как показано на рисунке, только у вашей
+пирамиды должно быть 20 рядов, а не 5.
+x
+xx
+xxx
+xxxx
+xxxxx-->
+
+
+<?php
+ // Задача 1 ///////////////////////////////////////////////
+ $arr = array(4, 2, 5, 19, 13, 0, 10);
+
+ foreach($arr as $item){
+     if($item > 3 && $item < 10){
+         echo $item . '<br>';
+         }
+     }
+
+ // Задача 2 ///////////////////////////////////////////////
+ $arr = array(4, 2, 5, 19, 13, 0, 10);
+ $e = 2;
+ $answer = 'Нет!';
+ foreach($arr as $item){
+     if($item == $e){
+     	$answer = 'Да!';
+     }
+  }
+  echo $answer;
+
+
+ // Задача 3 ///////////////////////////////////////////////
+ $arr = array(4, 2, 5, 19, 13, 0, 10, 11);
+ $count = 0;
+ foreach($arr as $item){
+     $count++;
+  }
+  echo $count;
+
+ // Задача 4
+ $arr = array('January','February','March','April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+ $month = 'February';
+ // $month = date(F);
+ foreach($arr as $item){
+     if($item == $month){
+	     echo '<b>'.$item.'</b><br>';
+     }else{
+	     echo $item.'<br>';
+     }
+  }
+
+
+ // Задача 5 ///////////////////////////////////////////////
+ // вариант 1
+ $j = 0;
+ while($j < 20){
+	 $x .= 'x';
+	 echo $x.'<br>';
+	 $j++;
+ }
+ 
+ // вариант 2
+  $i = 1;
+  while($i <= 20){
+ 	echo str_repeat("x", $i);
+ 	echo '<br>';
+ 	$i++;
+ }
+
+
+ // ФУНКЦИИ
+ function sq($num){
+	 $result = $num * $num;
+	 return $result;
+ }
+ echo sq(3);
+
+ 
+
+ function summ($num1, $num2){
+	 $result = $num1 + $num2;
+	 return $result;
+ }
+ echo summ(3, 6);
+
+
+
+  function powFunc($num1, $num2){
+	 $result = pow($num1, $num2);
+	 return $result;
+ }
+ echo powFunc(3, 6);
+
+
+
+
+  function arifmetic($num1, $num2, $num3){
+	  if($num3 != 0 ){
+		  $result = ($num1 - $num2) / $num3;
+		  return $result;
+ 	  }
+ 	else{
+	 	echo "FATAL ERROR - 0!!!";
+ 	}
+ }
+ echo arifmetic(6, 3, 4);
+
+
+	function makeDate($day, $month, $year){
+		$date = $day.'-'.$month.'-'.$year;
+		return $date;
+	}
+	echo makeDate('09', '02', '2015');
+ 
+?>
