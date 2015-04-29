@@ -76,7 +76,7 @@ foreach($href[1] as $link){
 
 
 }
-*/
+
 
 
 $url = 'http://2pag/index1.php';
@@ -85,6 +85,7 @@ $siteAnswer = getSite($url);
 preg_match('#<div[^>]+?id\s*=\s*["\']menu["\'][^>]*?>(.+?)</div>#su',$siteAnswer, $menu);
 
 preg_match_all('#<a[^>]+?href\s*=\s*["\'](.*?)["\'][^>]*?>(.*?)</a>#su',$menu[0], $href);
+
 
 
 
@@ -119,9 +120,6 @@ foreach($href[1] as $link){
 
     }
 
-
-
-
 }
 
 
@@ -130,4 +128,19 @@ foreach($href[1] as $link){
 //    "SELECT * FROM WHERE url='$url"
 //    //иначе просто сохраняем
 //}
+
+*/
+
+
+// перекодировка
+
+    $url = 'http://3charset';
+    $res = getSite($url);
+    $res = iconv('windows-1251','utf-8', $res);
+    var_dump($res);
+
+    /*preg_match('#<div[^>]+?id\s*=\s*["\']wrapper["\'][^>]*?>(.+?)</div>#su',$siteAnswer, $menu);*/
+
+
+
 
