@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Продвинутый курс JavaScript</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	
+		<script src="jquery.js"></script>
+	
+		<script>
+			function test(){
+				//var eee = $('h1:parent').css({color:'red', fontSize: '30px'});
+				//var eee = $('h2:parent').css({color:'red'});
+				
+				//alert(eee.length);
+
+
+                //$('h2').html('!');
+
+                //$('h3').css({color:'red'});
+               // $('h3').css('color', 'red');
+
+                //$('h2').css({'color':'blue', 'font-size': '30px'});
+
+                //$('.test').css('color', 'red');
+
+               // $('h2.test').css('color', 'red');
+
+                $('p+p').css('color', 'red'); // первый абзац, который идет за абзацем
+			}
+
+
+
+		</script>
+	
+	</head>
+	<body>
+		<div id="wrapper">
+			<div>
+				<h1>Это h1</h1>
+				<h2 class="test">Это h2 с классом test</h2>
+				<h2>Это h2 с <i>курсивом</i></h2>
+				<h2>Это h2</h2>
+				<h3>Это h3</h3>
+				<h2>Это h2 с <i>курсивом</i></h2>
+				<h2>Это h2 с <span><i>курсивом</i> в span</span></h2>
+				<h2 class="test">Это h2 с классом test</h2>
+				<h3 class="test">Это h3 с классом test</h3>
+				
+				<p class="test">Это абзац с классом test</p>
+				<p>Это еще абзац</p>
+				
+				
+				Начало пустых элементов
+				<h3></h3>
+				<h3></h3>
+				<h4></h4>
+				<h4></h4>
+				Конец пустых элементов
+				<p>
+					Абзац!
+				</p>
+			</div>
+			<div>
+				<ol>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li class="www">класс www</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+				
+				</ol>
+				
+			</div>
+			<div>
+				<ol>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li class="www">класс www</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+					<li>пункт</li>
+				
+				</ol>
+				
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div id="link">
+			<a href="" onclick="test(); return false;">Нажми на меня!</a>
+		</div>
+	</body>
+	
+</html>
+<!-- 
+	Курсы HTML, CSS, PHP, JavaScript. 
+	Лектор Трепачёв Дмитрий, phphtml.net.
+	
+	Еженедельные бесплатные вебинары 
+		на http://webinars.phphtml.net.
+-->
+
+
+			

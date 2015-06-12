@@ -1,0 +1,36 @@
+a{
+	color: blue;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+ul, ol{
+	padding: 0px 0px 0px 20px;
+	
+}
+li{
+	list-style-position: outside;
+}
+#link{
+	position: absolute;
+	top: 0px;
+	left: 30px;
+}
+#wrapper{
+	width: 80%;
+	margin: 30px auto;
+	padding: 20px;
+	border: 1px solid black;
+}
+#wrapper > div:not(.clearfix){
+	padding: 20px;
+	border: 1px solid black;
+	float: left;
+}
+#wrapper > div:not(.clearfix):not(:last-child){
+	margin-right: 100px;
+}
+.clearfix{
+	clear: both;
+}
